@@ -34,6 +34,23 @@ for liczba in liczby:
     if len(dzielniki) == 18:
         dzielniki.sort()
         print(liczba, dzielniki)
+#podpunkt 60.3
 
+najwieksza = max(liczby)
+wynik = None
 
+for liczba in liczby:
+    wzgl_pierwsza = True
+    for inna in liczby:
+        if liczba != inna:
+            a, b = liczba, inna
+            while b:
+                a, b = b, a % b
+            if a != 1:
+                wzgl_pierwsza = False
+                break
+    if wzgl_pierwsza:
+        wynik = liczba
+        break
 
+print("Największa liczba względnie pierwsza z pozostałymi:", wynik)
