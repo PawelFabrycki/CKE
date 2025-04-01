@@ -23,3 +23,4 @@ for napis in napisy:
     if sorted(napis[0]) == sorted(napis[1]):
         ilosc += 1
 print(ilosc)
+
