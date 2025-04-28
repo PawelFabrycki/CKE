@@ -9,8 +9,6 @@ with open("dane_napisy.txt") as file:
     for linia in file:
         napisy.append(linia.split())
 
-print(napisy)
-
 ilosc = 0
 for napis in napisy:
     if napis[0] == napis[1]:
@@ -24,3 +22,20 @@ for napis in napisy:
         ilosc += 1
 print(ilosc)
 
+# 68.3
+napisy = []
+with open("dane_napisy.txt") as file:
+    for linia in file:
+        a, b = linia.strip().split()
+        napisy.append(a)
+        napisy.append(b)
+
+slownik = {}
+
+for napis in napisy:
+    klucz = ''.join(sorted(napis))
+    if klucz not in slownik:
+        slownik[klucz] = []
+    slownik[klucz].append(napis)
+k = max(len(value) for value in slownik.values())
+print(k)
