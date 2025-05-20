@@ -22,13 +22,16 @@ listaTrojek = []
 with open("trojki.txt") as file:
     for linia in file:
         listaTrojek.append(linia.split())
-print(listaTrojek)
 
+# 66.1
 for liczby in listaTrojek:
     if sumaCyfr(liczby[0]) + sumaCyfr(liczby[1]) == int(liczby[2]):
         print(liczby)
 
+# 66.2
 for liczby in listaTrojek:
-    if int(liczby[0]) * int(liczby[1]) == int(liczby[2]):
-        if first(int(liczby[0])) and first(int(liczby[1])):
-            print(liczby)
+     if int(liczby[0]) * int(liczby[1]) == int(liczby[2]):
+         if first(int(liczby[0])) and first(int(liczby[1])):
+             print(liczby)
+
+
